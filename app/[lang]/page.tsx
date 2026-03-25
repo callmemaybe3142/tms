@@ -309,7 +309,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             Ready to Shape the Future of Healthcare?
           </h2>
           <p className="text-white/70 text-base sm:text-lg mb-10">
-            Begin your journey at Tealand Medical School. Apply for the 2026 intake.
+            Begin your journey at Tealand Medical School.
           </p>
           <Link
             href={`/${lang}/admissions`}

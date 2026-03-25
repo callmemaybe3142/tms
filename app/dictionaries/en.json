@@ -7,7 +7,7 @@
     "announcements": "Announcements",
     "news": "News & Articles",
     "contact": "Contact Us",
-    "language": " မြန်မာ"
+    "language": "mm"
   },
   "footer": {
     "tagline": "Nurturing Competent, Ethical, and Socially Accountable Medical Professionals",
@@ -21,7 +21,7 @@
   },
   "home": {
     "heroTitle": "Nurturing Competent, Ethical, and Socially Accountable Medical Professionals",
-    "heroSub": "Training the next generation of healthcare leaders for Tealand and the federal union.",
+    "heroSub": "Training the next generation of healthcare leaders for Tealand and the Federal Union.",
     "heroCta": "Explore Academics",
     "heroCtaSecondary": "Apply Now",
     "introTitle": "Welcome to Tealand Medical School",
@@ -29,12 +29,30 @@
     "introBtn": "Learn More About Us",
     "factsTitle": "At a Glance",
     "facts": {
-      "established": { "label": "Established", "value": "2026" },
-      "location": { "label": "Location", "value": "Ta'angland" },
-      "degree": { "label": "Degree Offered", "value": "M.B,B.S" },
-      "awarding": { "label": "Awarding Body", "value": "IUC-UMM" },
-      "language": { "label": "Language of Instruction", "value": "English / Myanmar" },
-      "mode": { "label": "Mode of Study", "value": "Full-time / Blended Learning" }
+      "established": {
+        "label": "Established",
+        "value": "2026"
+      },
+      "location": {
+        "label": "Location",
+        "value": "Ta'angland"
+      },
+      "degree": {
+        "label": "Degree Offered",
+        "value": "M.B,B.S"
+      },
+      "awarding": {
+        "label": "Awarding Body",
+        "value": "IUC-UMM"
+      },
+      "language": {
+        "label": "Language of Instruction",
+        "value": "English / Myanmar"
+      },
+      "mode": {
+        "label": "Mode of Study",
+        "value": "Full-time / Blended Learning"
+      }
     },
     "exploreTitle": "Explore TMS",
     "exploreAcademics": {
@@ -56,14 +74,41 @@
     "newsTitle": "News & Articles",
     "viewAll": "View All",
     "placeholderAnnounce": [
-      { "title": "Orientation Day for Batch 2026", "date": "March 15, 2026", "desc": "Welcome ceremony and orientation for the inaugural batch of TMS students." },
-      { "title": "Application Portal Opens", "date": "February 1, 2026", "desc": "The online admissions portal is now open for the 2026 intake." },
-      { "title": "Partnership with IUC-UMM Confirmed", "date": "January 10, 2026", "desc": "Formal academic affiliation agreement signed with IUC-UMM." }
+      {
+        "title": "Orientation Day for Batch 2026",
+        "date": "March 15, 2026",
+        "desc": "Welcome ceremony and orientation for the inaugural batch of TMS students."
+      },
+      {
+        "title": "Application Portal Opens",
+        "date": "February 1, 2026",
+        "desc": "The online admissions portal is now open for the 2026 intake."
+      },
+      {
+        "title": "Partnership with IUC-UMM Confirmed",
+        "date": "January 10, 2026",
+        "desc": "Formal academic affiliation agreement signed with IUC-UMM."
+      }
     ],
     "placeholderNews": [
-      { "title": "TMS: Bridging Healthcare Gaps in Ta'angland", "date": "March 20, 2026", "tag": "Feature", "desc": "An in-depth look at how TMS addresses critical healthcare shortages in conflict-affected regions." },
-      { "title": "The Role of Medical Education in Peacebuilding", "date": "March 8, 2026", "tag": "Article", "desc": "Exploring how training ethical doctors contributes to long-term stability and social justice." },
-      { "title": "Integrated Medical Education: Our Approach", "date": "February 25, 2026", "tag": "Academic", "desc": "A deep dive into the blended learning model adopted by Tealand Medical School." }
+      {
+        "title": "TMS: Bridging Healthcare Gaps in Ta'angland",
+        "date": "March 20, 2026",
+        "tag": "Feature",
+        "desc": "An in-depth look at how TMS addresses critical healthcare shortages in conflict-affected regions."
+      },
+      {
+        "title": "The Role of Medical Education in Peacebuilding",
+        "date": "March 8, 2026",
+        "tag": "Article",
+        "desc": "Exploring how training ethical doctors contributes to long-term stability and social justice."
+      },
+      {
+        "title": "Integrated Medical Education: Our Approach",
+        "date": "February 25, 2026",
+        "tag": "Academic",
+        "desc": "A deep dive into the blended learning model adopted by Tealand Medical School."
+      }
     ]
   },
   "about": {
@@ -75,24 +120,54 @@
     "visionBody": "To be a learning center of excellence in medical education that produces competent, ethical, and socially accountable medical doctors dedicated to serving the health needs of the people of Tealand and the wider federal union.",
     "missionTitle": "Mission",
     "missionItems": [
-      { "title": "Quality Education", "body": "To provide high-quality medical education aligned with international standards and national interim frameworks." },
-      { "title": "Healthcare Solutions", "body": "To address the critical shortage of healthcare professionals in underserved and conflict-affected regions." },
-      { "title": "Social Impact", "body": "To foster a learning environment that emphasizes professional integrity, human rights, and social justice." }
+      {
+        "title": "Quality Education",
+        "body": "To provide high-quality medical education aligned with international standards and national interim frameworks."
+      },
+      {
+        "title": "Healthcare Solutions",
+        "body": "To address the critical shortage of healthcare professionals in underserved and conflict-affected regions."
+      },
+      {
+        "title": "Social Impact",
+        "body": "To foster a learning environment that emphasizes professional integrity, human rights, and social justice."
+      }
     ],
     "coreValuesTitle": "Core Values",
     "coreValues": [
-      { "title": "Excellence", "body": "A steadfast commitment to high academic and clinical standards." },
-      { "title": "Integrity", "body": "Strict adherence to ethical, medical, and academic practices." },
-      { "title": "Equity", "body": "Ensuring non-discriminatory access to education and healthcare for all." },
-      { "title": "Accountability", "body": "Maintaining a deep responsibility to the community and governing authorities." }
+      {
+        "title": "Excellence",
+        "body": "A steadfast commitment to high academic and clinical standards."
+      },
+      {
+        "title": "Integrity",
+        "body": "Strict adherence to ethical, medical, and academic practices."
+      },
+      {
+        "title": "Equity",
+        "body": "Ensuring non-discriminatory access to education and healthcare for all."
+      },
+      {
+        "title": "Accountability",
+        "body": "Maintaining a deep responsibility to the community and governing authorities."
+      }
     ],
     "governanceTitle": "Governance & Leadership",
     "governanceBody": "Tealand Medical School operates under the Ta'angland Health Council (THC). Strategic decisions are managed by the TMS Governing Board, while academic integrity is ensured through our affiliation with IUC-UMM.",
     "orgTitle": "Organizational Structure",
     "orgItems": [
-      { "title": "Executive Leadership", "body": "Rector / Principal" },
-      { "title": "Academic Wing", "body": "Academic Council, Vice-Principal (Academic), and Heads of Pre-Clinical, Para-Clinical, and Clinical Departments." },
-      { "title": "Administrative Wing", "body": "Vice-Principal (Admin & Ops), Finance, HR, and Security Units." }
+      {
+        "title": "Executive Leadership",
+        "body": "Rector / Principal"
+      },
+      {
+        "title": "Academic Wing",
+        "body": "Academic Council, Vice-Principal (Academic), and Heads of Pre-Clinical, Para-Clinical, and Clinical Departments."
+      },
+      {
+        "title": "Administrative Wing",
+        "body": "Vice-Principal (Admin & Ops), Finance, HR, and Security Units."
+      }
     ]
   },
   "academics": {
@@ -102,28 +177,73 @@
     "curriculumTitle": "Curriculum Structure",
     "curriculumBody": "The curriculum is divided into three distinct phases to ensure a smooth transition from basic sciences to advanced clinical practice.",
     "phases": [
-      { "phase": "Phase I", "title": "Pre-Clinical Sciences", "years": "Year 1–2", "desc": "Foundation in anatomy, physiology, biochemistry, and behavioural sciences. Early patient contact integrated from Year 1." },
-      { "phase": "Phase II", "title": "Para-Clinical Sciences", "years": "Year 3–4", "desc": "Pathology, pharmacology, microbiology, and community medicine. Problem-based learning and clinical skills labs." },
-      { "phase": "Phase III", "title": "Clinical Training", "years": "Year 5–6", "desc": "Rotations in medicine, surgery, obstetrics, paediatrics, and community health at THC-authorised facilities." }
+      {
+        "phase": "Phase I",
+        "title": "Foundation Year",
+        "years": "Year 1",
+        "desc": "Foundation in anatomy, physiology, biochemistry, and behavioural sciences. Early patient contact integrated from Year 1."
+      },
+      {
+        "phase": "Phase II",
+        "title": "Para-Clinical Sciences",
+        "years": "Year 2-3",
+        "desc": "Pathology, pharmacology, microbiology, and community medicine. Problem-based learning and clinical skills labs."
+      },
+      {
+        "phase": "Phase III",
+        "title": "Clinical Training",
+        "years": "Year 4–6",
+        "desc": "Rotations in medicine, surgery, obstetrics, paediatrics, and community health at THC-authorised facilities."
+      }
     ],
     "methodTitle": "Teaching & Learning Methodology",
     "methodItems": [
-      { "title": "Theoretical Modules", "body": "Delivered through advanced e-learning platforms and virtual classrooms." },
-      { "title": "Clinical Training", "body": "Conducted face-to-face at health facilities authorized by the Ta'angland Health Council (THC)." },
-      { "title": "Integrated Learning", "body": "Bridging the gap between foundational sciences and clinical application from day one." }
+      {
+        "title": "Theoretical Modules",
+        "body": "Delivered through advanced e-learning platforms and virtual classrooms."
+      },
+      {
+        "title": "Clinical Training",
+        "body": "Conducted face-to-face at health facilities authorized by the Ta'angland Health Council (THC)."
+      },
+      {
+        "title": "Integrated Learning",
+        "body": "Bridging the gap between foundational sciences and clinical application from day one."
+      }
     ],
     "assessmentTitle": "Assessment & Quality Assurance",
     "assessmentItems": [
-      { "title": "Formative Assessment", "body": "Continuous evaluation through quizzes, clinical observations, and feedback." },
-      { "title": "Summative Assessment", "body": "Professional examinations conducted in strict coordination with the IUC-UMM standards." }
+      {
+        "title": "Formative Assessment",
+        "body": "Continuous evaluation through quizzes, clinical observations, and feedback."
+      },
+      {
+        "title": "Summative Assessment",
+        "body": "Professional examinations conducted in strict coordination with the IUC-UMM standards."
+      }
     ],
     "faqTitle": "Frequently Asked Questions",
     "faqItems": [
-      { "q": "How long is the M.B,B.S. program?", "a": "The program is 6 years in total, divided into three phases: Pre-Clinical, Para-Clinical, and Clinical." },
-      { "q": "Who awards the M.B,B.S. degree?", "a": "The degree is officially conferred by the Interim University Council, University of Medicine, Mandalay (IUC-UMM)." },
-      { "q": "What language is instruction conducted in?", "a": "Instruction is conducted in English with Myanmar language support available." },
-      { "q": "Is online learning available?", "a": "Yes. TMS uses a Blended Learning approach — theoretical modules are delivered online, while clinical training is in-person." },
-      { "q": "Are clinical placements guaranteed?", "a": "Yes. Clinical training is conducted at THC-authorised health facilities, ensuring all students receive practical exposure." }
+      {
+        "q": "How long is the M.B,B.S. program?",
+        "a": "The program is 6 years in total, divided into three phases: Pre-Clinical, Para-Clinical, and Clinical."
+      },
+      {
+        "q": "Who awards the M.B,B.S. degree?",
+        "a": "The degree is officially conferred by the Interim University Council, University of Medicine, Mandalay (IUC-UMM)."
+      },
+      {
+        "q": "What language is instruction conducted in?",
+        "a": "Instruction is conducted in English with Myanmar language support available."
+      },
+      {
+        "q": "Is online learning available?",
+        "a": "Yes. TMS uses a Blended Learning approach — theoretical modules are delivered online, while clinical training is in-person."
+      },
+      {
+        "q": "Are clinical placements guaranteed?",
+        "a": "Yes. Clinical training is conducted at THC-authorised health facilities, ensuring all students receive practical exposure."
+      }
     ]
   },
   "admissions": {
@@ -132,17 +252,46 @@
     "overviewBody": "Tealand Medical School seeks dedicated students who are committed to serving their communities. Our admission policy is built on the principles of transparency, merit, and social equity.",
     "processTitle": "Application Process",
     "processSteps": [
-      { "step": "01", "title": "Check Eligibility", "desc": "Review selection criteria and ensure you meet academic and personal requirements." },
-      { "step": "02", "title": "Submit Application", "desc": "Complete the online application form with all required documents." },
-      { "step": "03", "title": "Entrance Evaluation", "desc": "Sit the TMS entrance assessment — designed to evaluate academic ability and ethical reasoning." },
-      { "step": "04", "title": "Interview", "desc": "Selected candidates will be invited for a personal interview with the admissions panel." },
-      { "step": "05", "title": "Offer & Enrollment", "desc": "Successful applicants receive an offer letter and complete enrollment formalities." }
+      {
+        "step": "01",
+        "title": "Check Eligibility",
+        "desc": "Review selection criteria and ensure you meet academic and personal requirements."
+      },
+      {
+        "step": "02",
+        "title": "Submit Application",
+        "desc": "Complete the online application form with all required documents."
+      },
+      {
+        "step": "03",
+        "title": "Entrance Evaluation",
+        "desc": "Sit the TMS entrance assessment — designed to evaluate academic ability and ethical reasoning."
+      },
+      {
+        "step": "04",
+        "title": "Interview",
+        "desc": "Selected candidates will be invited for a personal interview with the admissions panel."
+      },
+      {
+        "step": "05",
+        "title": "Offer & Enrollment",
+        "desc": "Successful applicants receive an offer letter and complete enrollment formalities."
+      }
     ],
     "criteriaTitle": "Selection Criteria",
     "criteriaItems": [
-      { "title": "Academic Merit", "body": "Previous educational performance in science-related subjects." },
-      { "title": "Entrance Evaluation", "body": "Success in the TMS entrance assessment process." },
-      { "title": "Personal Integrity", "body": "A demonstrated commitment to medical ethics and community service." }
+      {
+        "title": "Academic Merit",
+        "body": "Previous educational performance in science-related subjects."
+      },
+      {
+        "title": "Entrance Evaluation",
+        "body": "Success in the TMS entrance assessment process."
+      },
+      {
+        "title": "Personal Integrity",
+        "body": "A demonstrated commitment to medical ethics and community service."
+      }
     ],
     "equityTitle": "Priority & Equity Policy",
     "equityBody": "In line with our mission to address healthcare shortages in underserved regions, special consideration and priority are given to:",
@@ -152,17 +301,41 @@
     ],
     "recognitionTitle": "Institutional Recognition & Student Mobility",
     "recognitionItems": [
-      { "title": "Official Awarding", "body": "The M.B,B.S. degree is officially conferred by the Interim University Council, University of Medicine, Mandalay (IUC-UMM)." },
-      { "title": "Accreditation", "body": "TMS is institutionally registered with the NUG Ministry of Education (MOE) and operates in policy coordination with the NUG Ministry of Health (MOH)." },
-      { "title": "Credit Transfers", "body": "Through the NUG/EAO health network, we facilitate credit transfers and clinical placement rotations at various partner hospitals." }
+      {
+        "title": "Official Awarding",
+        "body": "The M.B,B.S. degree is officially conferred by the Interim University Council, University of Medicine, Mandalay (IUC-UMM)."
+      },
+      {
+        "title": "Accreditation",
+        "body": "TMS is institutionally registered with the NUG Ministry of Education (MOE) and operates in policy coordination with the NUG Ministry of Health (MOH)."
+      },
+      {
+        "title": "Credit Transfers",
+        "body": "Through the NUG/EAO health network, we facilitate credit transfers and clinical placement rotations at various partner hospitals."
+      }
     ],
     "faqTitle": "Frequently Asked Questions",
     "faqItems": [
-      { "q": "What are the academic requirements to apply?", "a": "Applicants must have a strong background in science subjects. Specific requirements will be published with each intake announcement." },
-      { "q": "Is there a tuition fee?", "a": "Details on tuition and financial assistance will be provided in the official admissions announcement." },
-      { "q": "Can students from outside Tealand apply?", "a": "Yes. While priority is given to Tealand candidates, students from other EAO regions within the federal union are also welcome to apply." },
-      { "q": "When does the application portal open?", "a": "The application portal opening date is announced each year. Check the Announcements page for the latest information." },
-      { "q": "Will my M.B,B.S. degree be recognised nationally?", "a": "Yes. The degree is conferred by IUC-UMM and TMS is affiliated with the NUG MOE and MOH, ensuring national recognition." }
+      {
+        "q": "What are the academic requirements to apply?",
+        "a": "Applicants must have a strong background in science subjects. Specific requirements will be published with each intake announcement."
+      },
+      {
+        "q": "Is there a tuition fee?",
+        "a": "Details on tuition and financial assistance will be provided in the official admissions announcement."
+      },
+      {
+        "q": "Can students from outside Tealand apply?",
+        "a": "Yes. While priority is given to Tealand candidates, students from other EAO regions within the federal union are also welcome to apply."
+      },
+      {
+        "q": "When does the application portal open?",
+        "a": "The application portal opening date is announced each year. Check the Announcements page for the latest information."
+      },
+      {
+        "q": "Will my M.B,B.S. degree be recognised nationally?",
+        "a": "Yes. The degree is conferred by IUC-UMM and TMS is affiliated with the NUG MOE and MOH, ensuring national recognition."
+      }
     ],
     "applyBtn": "Start Your Application"
   },
