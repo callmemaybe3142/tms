@@ -13,11 +13,12 @@ function getLocale(request: NextRequest): string {
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // Skip for static assets and Next internals
+  // Skip for static assets, Next internals, and admin area
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/images') ||
     pathname.startsWith('/favicon') ||
+    pathname.startsWith('/admin') ||
     pathname.includes('.')
   ) {
     return NextResponse.next()

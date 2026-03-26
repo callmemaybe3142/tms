@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@plugin "@tailwindcss/typography";
 @theme inline {
   /* TMS Color Palette - derived from logo */
   --color-tms-teal:       #1B5954;

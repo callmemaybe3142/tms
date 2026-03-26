@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale, type Locale } from '@/app/lib/dictionaries'
 import FAQAccordion from '@/app/components/FAQAccordion'
+import { CurriculumGallery } from './CurriculumGallery'
 
 export const metadata: Metadata = { title: 'Academics' }
 
@@ -62,6 +63,16 @@ export default async function AcademicsPage({ params }: { params: Promise<{ lang
               </div>
             ))}
           </div>
+
+          {/* Curriculum Lightbox Images Module */}
+          <CurriculumGallery 
+            images={[
+              '/images/01-cirriculum.jpg',
+              '/images/02-cirriculum.jpg',
+              '/images/03-cirriculum.jpg',
+              '/images/04-cirriculum.jpg'
+            ]} 
+          />
         </div>
       </section>
 
