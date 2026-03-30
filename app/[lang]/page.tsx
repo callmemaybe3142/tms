@@ -33,11 +33,13 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <div className="absolute bottom-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C9A84C]/20 to-transparent z-10" />
 
         <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center py-24">
-          {/* Crest */}
-          <div className="flex justify-center mb-8">
-            <div className="relative w-24 h-24 sm:w-32 sm:h-32 drop-shadow-2xl">
-              <Image src="/images/logo-tms.png" alt="TMS Crest" fill className="object-contain" priority />
-            </div>
+          <div className="flex justify-center mb-10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo-tms.png"
+              alt="TMS Crest"
+              className="w-32 h-32 sm:w-44 sm:h-44 object-cover object-center rounded-full drop-shadow-2xl"
+            />
           </div>
 
           <p className="text-[#C9A84C] text-sm sm:text-base tracking-[0.3em] uppercase font-semibold mb-6">
@@ -208,93 +210,66 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         </div>
       </section>
 
-      {/* ─── LATEST ANNOUNCEMENTS ─────────────────────────── */}
-      <section className="py-20 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-4">
-            <div>
-              <div className="inline-flex items-center gap-2 mb-2">
-                <span className="w-8 h-0.5 bg-[#C9A84C]" />
-                <span className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase">Updates</span>
-              </div>
-              <h2 className="font-serif text-3xl text-[#1B5954] font-bold">{t.announcementsTitle}</h2>
-            </div>
+      {/* ─── LATEST UPDATES & STORIES ─────────────────────────── */}
+      <section className="py-20 sm:py-32 bg-white relative overflow-hidden">
+        {/* Soft decorative blur */}
+        <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] bg-[#C9A84C]/5 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            {/* Announcements Card */}
             <Link
               href={`/${lang}/announcements`}
-              id="home-view-all-announcements"
-              className="text-sm font-medium text-[#1B5954] border border-[#1B5954]/30 px-5 py-2 rounded-full
-                hover:bg-[#1B5954] hover:text-white transition-all duration-200 whitespace-nowrap"
+              className="group relative flex flex-col justify-end p-10 sm:p-14 rounded-3xl overflow-hidden min-h-[420px] sm:min-h-[500px] border border-[#1B5954]/10 shadow-lg hover:shadow-2xl hover:shadow-[#1B5954]/20 transition-all duration-500"
             >
-              {t.viewAll} →
-            </Link>
-          </div>
+              <div className="absolute inset-0 bg-[#1B5954] transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0e2e2c] via-[#1B5954]/80 to-transparent" />
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '30px 30px' }} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {t.placeholderAnnounce.map((item, i) => (
-              <div
-                key={i}
-                className="group flex flex-col gap-3 p-6 rounded-2xl border border-[#1B5954]/10
-                  hover:border-[#C9A84C]/40 hover:shadow-lg transition-all duration-300 bg-[#FAF7F0]"
-              >
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#C9A84C]" />
-                  <span className="text-xs text-[#C9A84C] font-medium">{item.date}</span>
+              <div className="relative z-10 flex flex-col items-start text-white">
+                <span className="px-4 py-1.5 rounded-full bg-[#C9A84C] text-[#0e2e2c] text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+                  Official Notices
+                </span>
+                <h2 className="font-serif text-3xl sm:text-5xl font-bold mb-4 group-hover:text-[#C9A84C] transition-colors leading-[1.1]">
+                  {t.announcementsTitle}
+                </h2>
+                <p className="text-white/80 text-base sm:text-lg mb-10 max-w-sm leading-relaxed">
+                  Stay updated with the latest official announcements, schedules, and notices from Tealand Medical School.
+                </p>
+                <div className="flex items-center gap-4 text-sm font-semibold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                  {t.viewAll}
+                  <span className="w-10 h-0.5 bg-[#C9A84C]" />
                 </div>
-                <h3 className="font-serif text-[#1B5954] font-bold text-base group-hover:text-[#143f3c] transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-[#4a6361] text-sm leading-relaxed">{item.desc}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </Link>
 
-      {/* ─── NEWS & ARTICLES ──────────────────────────────── */}
-      <section className="py-20 sm:py-24 bg-[#FAF7F0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-4">
-            <div>
-              <div className="inline-flex items-center gap-2 mb-2">
-                <span className="w-8 h-0.5 bg-[#C9A84C]" />
-                <span className="text-[#C9A84C] text-sm font-semibold tracking-widest uppercase">Stories</span>
-              </div>
-              <h2 className="font-serif text-3xl text-[#1B5954] font-bold">{t.newsTitle}</h2>
-            </div>
+            {/* News & Articles Card */}
             <Link
               href={`/${lang}/news`}
-              id="home-view-all-news"
-              className="text-sm font-medium text-[#1B5954] border border-[#1B5954]/30 px-5 py-2 rounded-full
-                hover:bg-[#1B5954] hover:text-white transition-all duration-200 whitespace-nowrap"
+              className="group relative flex flex-col justify-end p-10 sm:p-14 rounded-3xl overflow-hidden min-h-[420px] sm:min-h-[500px] border border-[#C9A84C]/30 shadow-lg hover:shadow-2xl hover:shadow-[#C9A84C]/20 transition-all duration-500"
             >
-              {t.viewAll} →
-            </Link>
-          </div>
+              <div className="absolute inset-0 bg-[#FAF7F0] transition-transform duration-700 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F0] via-transparent to-transparent opacity-50" />
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #1B5954 1px, transparent 0)', backgroundSize: '30px 30px' }} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.placeholderNews.map((item, i) => (
-              <article
-                key={i}
-                className="group bg-white rounded-2xl overflow-hidden border border-[#1B5954]/10
-                  hover:shadow-xl hover:shadow-[#1B5954]/10 hover:-translate-y-1 transition-all duration-300"
-              >
-                {/* Colour bar */}
-                <div className="h-1 bg-gradient-to-r from-[#1B5954] to-[#C9A84C]" />
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-[#1B5954]/10 text-[#1B5954] text-xs font-semibold rounded-full">
-                      {item.tag}
-                    </span>
-                    <span className="text-xs text-[#4a6361]">{item.date}</span>
-                  </div>
-                  <h3 className="font-serif text-[#1B5954] font-bold text-lg mb-3 leading-snug
-                    group-hover:text-[#143f3c] transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-[#4a6361] text-sm leading-relaxed">{item.desc}</p>
+              <div className="relative z-10 flex flex-col items-start text-[#1B5954]">
+                <span className="px-4 py-1.5 rounded-full bg-[#1B5954] text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
+                  Stories & Insights
+                </span>
+                <h2 className="font-serif text-3xl sm:text-5xl font-bold mb-4 group-hover:text-[#143f3c] transition-colors leading-[1.1]">
+                  {t.newsTitle}
+                </h2>
+                <p className="text-[#4a6361] text-base sm:text-lg mb-10 max-w-sm leading-relaxed">
+                  Explore exciting stories, research breakthroughs, and campus life articles curated by our community.
+                </p>
+                <div className="flex items-center gap-4 text-sm font-semibold uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                  {t.viewAll}
+                  <span className="w-10 h-0.5 bg-[#1B5954]" />
                 </div>
-              </article>
-            ))}
+              </div>
+            </Link>
+
           </div>
         </div>
       </section>

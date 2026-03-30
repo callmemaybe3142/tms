@@ -24,7 +24,7 @@ export default async function AnnouncementsPage({
 }) {
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
-  
+
   const dict = await getDictionary(lang as Locale)
   const t = dict.announcements
   const supabase = await createClient()
@@ -36,7 +36,7 @@ export default async function AnnouncementsPage({
 
   // 1. Fetch only dates of all announcements to dynamically compute the sidebar tree
   const { data: allDates } = await supabase.from('announcements').select('created_at').order('created_at', { ascending: false })
-  
+
   const archiveMap = new Map<number, Set<number>>()
   if (allDates) {
     allDates.forEach(d => {
@@ -94,7 +94,7 @@ export default async function AnnouncementsPage({
 
       <section className="py-16 sm:py-24 bg-[#FAF7F0] min-h-[50vh]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row gap-8 items-start">
-          
+
           <ArchiveSidebar archiveData={archiveData} currentYear={currentYear} currentMonth={currentMonth} lang={lang} />
 
           <div className="flex-1 w-full shrink">
@@ -109,10 +109,10 @@ export default async function AnnouncementsPage({
                 {announcements.map((post) => {
                   const plainText = removeMarkdown(post.content)
                   const trimmedContent = plainText.length > 200 ? plainText.slice(0, 200) + '...' : plainText
-                  
+
                   return (
                     <article key={post.id} className="group relative grid grid-cols-1 sm:grid-cols-[1fr_200px] gap-6 sm:gap-12 items-start border-b border-gray-200 pb-12 sm:pb-16 last:border-0 hover:bg-white/40 p-4 -mx-4 rounded-xl transition-colors">
-                      <div className="order-2 sm:order-1 flex flex-col items-start">
+                      <div className="flex flex-col items-start">
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-6 h-6 rounded-full bg-[#1B5954] text-white flex items-center justify-center text-[10px] font-bold uppercase transition-colors">
                             {post.author_id?.username ? post.author_id.username[0] : 'T'}
@@ -126,7 +126,7 @@ export default async function AnnouncementsPage({
                           </time>
                         </div>
 
-                        <h2 className="font-serif text-2xl font-bold text-[#0e2e2c] mb-3 group-hover:text-[#1B5954] transition-colors line-clamp-2">
+                        <h2 className="font-serif text-2xl font-bold text-[#0e2e2c] mb-3 group-hover:text-[#1B5954] transition-colors line-clamp-5">
                           <Link href={`/${lang}/announcements/${post.id}`}>
                             <span className="absolute inset-0 z-10" />
                             {post.title}
@@ -143,12 +143,12 @@ export default async function AnnouncementsPage({
                         </div>
                       </div>
 
-                      <div className={`order-1 sm:order-2 aspect-video sm:aspect-[4/3] w-full relative rounded-lg overflow-hidden shadow-sm ${(!post.photos || post.photos.length === 0) ? 'bg-[#1B5954]/5 p-6 flex items-center justify-center' : 'bg-gray-100'}`}>
+                      <div className={`aspect-video sm:aspect-[4/3] w-full relative rounded-lg overflow-hidden shadow-sm ${(!post.photos || post.photos.length === 0) ? 'bg-[#1B5954]/5 p-6 flex items-center justify-center' : 'bg-gray-100'}`}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img 
-                          src={post.photos && post.photos.length > 0 ? post.photos[0] : '/images/logo-tms.png'} 
-                          alt={post.title} 
-                          className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${post.photos && post.photos.length > 0 ? 'object-cover' : 'object-contain opacity-40'}`} 
+                        <img
+                          src={post.photos && post.photos.length > 0 ? post.photos[0] : '/images/logo-tms.png'}
+                          alt={post.title}
+                          className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${post.photos && post.photos.length > 0 ? 'object-cover' : 'object-contain opacity-40'}`}
                         />
                       </div>
                     </article>
@@ -169,11 +169,11 @@ export default async function AnnouncementsPage({
                     &larr; Previous
                   </span>
                 )}
-                
+
                 <span className="text-sm font-medium text-gray-500 px-4">
                   {page} / {totalPages}
                 </span>
-                
+
                 {page < totalPages ? (
                   <Link href={`/${lang}/announcements?page=${page + 1}${currentYear ? `&year=${currentYear}&month=${currentMonth}` : ''}`} className="px-5 py-2.5 text-sm font-semibold text-[#1B5954] bg-white border border-[#1B5954]/20 rounded-full hover:bg-[#1B5954] hover:text-white transition-all shadow-sm">
                     Next &rarr;

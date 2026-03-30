@@ -44,14 +44,13 @@ export default function Navbar({ navItems, langLabel, currentLang }: NavbarProps
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-[#0e2e2c]/95 backdrop-blur-md shadow-lg shadow-black/30'
-          : 'bg-[#0e2e2c]/80 backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-[#0e2e2c]/80 backdrop-blur-md shadow-lg shadow-black/30'
+        : 'bg-[#0e2e2c]/80 backdrop-blur-sm'
+        }`}
     >
       {/* Top stripe */}
-      <div className="h-0.5 w-full bg-gradient-to-r from-[#C9A84C] via-[#e0c06a] to-[#C9A84C]" />
+      {/* <div className="h-0.5 w-full bg-gradient-to-r from-[#C9A84C] via-[#e0c06a] to-[#C9A84C]" /> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -137,9 +136,8 @@ export default function Navbar({ navItems, langLabel, currentLang }: NavbarProps
 
       {/* Mobile dropdown */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        } bg-[#0e2e2c]/98 border-t border-[#C9A84C]/20`}
+        className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          } bg-[#0e2e2c]/98 border-t border-[#C9A84C]/20`}
       >
         <nav className="px-4 pb-6 pt-4 flex flex-col gap-1">
           {navItems.map((item) => (

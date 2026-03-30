@@ -37,7 +37,7 @@ export function ArchiveSidebar({ archiveData, currentYear, currentMonth, lang }:
 
   const Content = (
     <div className="flex flex-col gap-2">
-      <Link 
+      <Link
         href={`/${lang}/announcements`}
         onClick={() => setIsOpen(false)}
         className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isAll ? 'bg-[#1B5954] text-white' : 'text-gray-700 hover:bg-gray-100'}`}
@@ -49,19 +49,19 @@ export function ArchiveSidebar({ archiveData, currentYear, currentMonth, lang }:
         <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest px-4 mb-1">
           {lang === 'my' ? 'အချိန်အလိုက်ရှာရန်' : 'Filter by Date'}
         </h3>
-        
+
         {archiveData.map((data) => {
           const isExpanded = expandedYears.has(data.year)
           return (
             <div key={data.year} className="flex flex-col">
-              <button 
+              <button
                 onClick={() => toggleYear(data.year)}
                 className="flex items-center justify-between px-4 py-2 text-sm font-bold text-gray-800 hover:bg-gray-100 rounded-lg transition-colors"
               >
                 <span>{data.year}</span>
                 <span className={`text-gray-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}>▼</span>
               </button>
-              
+
               {isExpanded && (
                 <div className="flex flex-col pl-4 mt-1 border-l-2 border-gray-100 ml-6 gap-1">
                   {data.months.map((m) => {
@@ -90,9 +90,9 @@ export function ArchiveSidebar({ archiveData, currentYear, currentMonth, lang }:
     <>
       {/* Mobile Filter Button */}
       <div className="md:hidden w-full mb-6">
-        <button 
+        <button
           onClick={() => setIsOpen(true)}
-          className="w-full bg-white border border-gray-200 text-gray-800 font-semibold py-3 rounded-xl shadow-sm flex items-center justify-center gap-2"
+          className="w-full border border-gray-200 py-3 rounded-xl shadow-sm flex items-center justify-center gap-2 bg-[#C9A84C] text-[#0e2e2c] font-bold text-sm"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
           {lang === 'my' ? 'စီစစ်ရန်' : 'Filter Announcements'}

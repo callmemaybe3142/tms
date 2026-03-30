@@ -5,6 +5,7 @@ import { getDictionary, hasLocale, locales, type Locale } from '@/app/lib/dictio
 import Navbar from '@/app/components/Navbar'
 import Footer from '@/app/components/Footer'
 import '../globals.css'
+import NextTopLoader from 'nextjs-toploader'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -61,18 +62,19 @@ export default async function LangLayout({
   const dict = await getDictionary(lang as Locale)
 
   const navItems = [
-    { label: dict.nav.home,          href: `/${lang}` },
-    { label: dict.nav.about,         href: `/${lang}/about` },
-    { label: dict.nav.academics,     href: `/${lang}/academics` },
-    { label: dict.nav.admissions,    href: `/${lang}/admissions` },
+    { label: dict.nav.home, href: `/${lang}` },
+    { label: dict.nav.about, href: `/${lang}/about` },
+    { label: dict.nav.academics, href: `/${lang}/academics` },
+    { label: dict.nav.admissions, href: `/${lang}/admissions` },
     { label: dict.nav.announcements, href: `/${lang}/announcements` },
-    { label: dict.nav.news,          href: `/${lang}/news` },
-    { label: dict.nav.contact,       href: `/${lang}/contact` },
+    { label: dict.nav.news, href: `/${lang}/news` },
+    { label: dict.nav.contact, href: `/${lang}/contact` },
   ]
 
   return (
     <html lang={lang} className={`${inter.variable} ${playfair.variable} h-full scroll-smooth`}>
       <body className="font-sans min-h-full flex flex-col bg-[#FAF7F0] antialiased">
+        <NextTopLoader color="#C9A84C" showSpinner={true} shadow="0 0 10px #C9A84C,0 0 5px #C9A84C" height={4} zIndex={1600} />
         <Navbar
           navItems={navItems}
           langLabel={dict.nav.language}

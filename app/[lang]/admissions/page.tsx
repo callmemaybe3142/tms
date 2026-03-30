@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale, type Locale } from '@/app/lib/dictionaries'
 import FAQAccordion from '@/app/components/FAQAccordion'
@@ -27,14 +27,14 @@ export default async function AdmissionsPage({ params }: { params: Promise<{ lan
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl text-white font-bold mb-4">{t.heroTitle}</h1>
           <p className="text-white/70 text-base sm:text-xl max-w-2xl mx-auto mb-10">{t.heroSub}</p>
-          <Link
+          {/* <Link
             href="#apply"
             id="admissions-hero-cta"
             className="inline-block px-8 py-3.5 bg-[#C9A84C] text-[#0e2e2c] font-bold text-sm tracking-wide
               uppercase rounded-full hover:bg-[#e0c06a] transition-all duration-300 shadow-lg"
           >
             {t.applyBtn}
-          </Link>
+          </Link> */}
         </div>
       </section>
 
@@ -136,6 +136,27 @@ export default async function AdmissionsPage({ params }: { params: Promise<{ lan
               </div>
             ))}
           </div>
+
+          {/* Organization Recognition Avatars */}
+          <div className="mt-16 flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+            {[
+              { src: '/images/moe.jpg', alt: 'MOE' },
+              { src: '/images/moh.jpg', alt: 'MOH' },
+              { src: '/images/umm-interm-logo.jpg', alt: 'UMM Interim Logo' },
+            ].map((img, idx) => (
+              <div
+                key={idx}
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg shadow-[#1B5954]/5 bg-white flex items-center justify-center p-1 sm:p-2 hover:scale-105 transition-transform duration-300"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -148,7 +169,7 @@ export default async function AdmissionsPage({ params }: { params: Promise<{ lan
       </section>
 
       {/* Apply CTA */}
-      <section
+      {/* <section
         id="apply"
         className="py-20 bg-gradient-to-r from-[#0e2e2c] via-[#1B5954] to-[#143f3c] relative overflow-hidden"
       >
@@ -181,7 +202,7 @@ export default async function AdmissionsPage({ params }: { params: Promise<{ lan
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
