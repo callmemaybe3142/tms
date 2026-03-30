@@ -16,8 +16,8 @@ export default function AdminLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} h-full bg-gray-50`}>
-      <body className="font-sans min-h-full antialiased text-gray-900">
+    <html lang="en" className={`${inter.variable} h-full bg-gray-50 `}>
+      <body className="font-sans min-h-full antialiased text-gray-900" suppressHydrationWarning>
         <NextTopLoader color="#1B5954" showSpinner={false} zIndex={1600} />
         {children}
       </body>

@@ -73,7 +73,7 @@ export default async function LangLayout({
 
   return (
     <html lang={lang} className={`${inter.variable} ${playfair.variable} h-full scroll-smooth`}>
-      <body className="font-sans min-h-full flex flex-col bg-[#FAF7F0] antialiased">
+      <body className="font-sans min-h-full flex flex-col bg-[#FAF7F0] antialiased" suppressHydrationWarning>
         <NextTopLoader color="#C9A84C" showSpinner={true} shadow="0 0 10px #C9A84C,0 0 5px #C9A84C" height={4} zIndex={1600} />
         <Navbar
           navItems={navItems}
