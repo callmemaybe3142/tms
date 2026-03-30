@@ -6,6 +6,7 @@ import Navbar from '@/app/components/Navbar'
 import Footer from '@/app/components/Footer'
 import '../globals.css'
 import NextTopLoader from 'nextjs-toploader'
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -82,6 +83,7 @@ export default async function LangLayout({
         />
         <main className="flex-1 pt-20">{children}</main>
         <Footer dict={dict.footer} navItems={navItems} lang={lang} />
+        <Analytics />
       </body>
     </html>
   )
