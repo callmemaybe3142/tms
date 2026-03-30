@@ -12,10 +12,29 @@ import { ViewTracker } from './ViewTracker'
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
   const supabase = await createClient()
-  const { data } = await supabase.from('announcements').select('title').eq('id', id).single()
+  const { data } = await supabase.from('announcements').select('title, photos').eq('id', id).single()
 
   if (!data) return { title: 'Announcement Not Found' }
-  return { title: data.title }
+  
+  const ogImage = data.photos && data.photos.length > 0 ? data.photos[0] : '/images/logo-tms.png'
+
+  return { 
+    title: data.title,
+    openGraph: {
+      title: data.title,
+      images: [
+        {
+          url: ogImage,
+          alt: data.title,
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: data.title,
+      images: [ogImage],
+    }
+  }
 }
 
 export default async function AnnouncementDetailPage({

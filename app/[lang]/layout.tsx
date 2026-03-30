@@ -40,11 +40,26 @@ export async function generateMetadata({
         ? 'တိလမ်းဆေးကျောင်း - တက်မြောက်သော ဆရာဝန်များ မွေးထုတ်ရေး'
         : 'Tealand Medical School — Nurturing Competent, Ethical, and Socially Accountable Medical Professionals',
     keywords: ['Tealand Medical School', 'TMS', 'medical education', 'Myanmar', "Ta'angland", 'MBBS'],
-    metadataBase: new URL('https://tms.edu.mm'),
+    metadataBase: new URL('https://tealandmedical.vercel.app'),
     openGraph: {
       siteName: 'Tealand Medical School',
+      title: 'Tealand Medical School',
+      description: lang === 'my' ? 'တိလမ်းဆေးကျောင်း - တက်မြောက်သော ဆရာဝန်များ မွေးထုတ်ရေး' : 'Tealand Medical School — Nurturing Competent Medical Professionals',
       type: 'website',
       locale: lang === 'my' ? 'my_MM' : 'en_US',
+      images: [
+        {
+          url: '/images/logo-tms.png',
+          width: 800,
+          height: 800,
+          alt: 'Tealand Medical School Logo',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Tealand Medical School',
+      images: ['/images/logo-tms.png'],
     },
   }
 }
