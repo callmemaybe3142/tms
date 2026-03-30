@@ -7,6 +7,7 @@ import { createClient } from '@/app/utils/supabase/server'
 import { hasLocale } from '@/app/lib/dictionaries'
 import { PhotoGallery } from './PhotoGallery'
 import { ScrollToTop } from './ScrollToTop'
+import { ViewTracker } from './ViewTracker'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
@@ -39,13 +40,9 @@ export default async function AnnouncementDetailPage({
     notFound()
   }
 
-  // 2. Increment View Count
-  // Since this is a server component, it runs on every page load and safely pushes the update.
+  // 2. Prepare View Count for instant UI rendering
+  // Actual database mutation has been securely offset to the ViewTracker component using a Supabase Postgres RPC to bypass RLS failures safely.
   const newViewCount = (post.view_count || 0) + 1
-  await supabase
-    .from('announcements')
-    .update({ view_count: newViewCount })
-    .eq('id', id)
 
   return (
     <article className="bg-[#FAF7F0] min-h-screen pb-24">
@@ -110,6 +107,9 @@ export default async function AnnouncementDetailPage({
 
       {/* Floating Scroll To Top Button */}
       <ScrollToTop />
+      
+      {/* Invisible Secure View Counter (bypasses RLS and NextJS Caching) */}
+      <ViewTracker announcementId={id} />
     </article>
   )
 }
